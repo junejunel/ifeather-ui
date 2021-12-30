@@ -1,0 +1,162 @@
+@charset "UTF-8";
+@import "common/var";
+@import "mixins/mixins";
+
+@include b(button) {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap; // 文本不会换行
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  -webkit-appearance: none; // 去除浏览器默认样式
+  text-align: center;
+  box-sizing: border-box; // 为元素设定的宽度和高度决定了元素的边框盒
+  outline: none;
+  margin: 0;
+  transition: 0.1s;
+  font-weight: 500;
+  -moz-user-select: none; // 禁止元素的文字被选中
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  &:hover,
+  &:focus {
+    color: #409eff;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+  }
+  &.is-plain{
+    &:hover,
+    &:focus{
+      background: #fff;
+      border-color: #489eff;
+      color: #409eff;
+    }
+  }
+  &.is-round {
+    border-radius: 20px;
+    padding: 12px 23px;
+  }
+  &.is-circle {
+    border-radius: 50%;
+    padding: 12px;
+  }
+  &.is-disabled{
+    cursor: no-drop;
+  }
+  &-primary {
+    color:#fff;
+    background-color: $--color-primary;
+    border-color: $--color-primary;
+    &:hover,
+    &:focus{
+      background: #66b1ff;
+      background-color: #66b1ff;
+      color: #fff;
+    }
+    &.is-plain{
+      color: $--color-primary;
+      background: #ecf5ff;
+      &:hover,
+      &:focus{
+        background: $--color-primary;
+        border-color: $--color-primary;
+        color: #fff;
+      }
+    }
+  }
+
+  &-info {
+    color:#fff;
+    background-color: $--color-info;
+    border-color: $--color-info;
+    &:hover,
+    &:focus{
+      background: #a6a9ad;
+      background-color: #a6a9ad;
+      color: #fff;
+    }
+    &.is-plain{
+      color: $--color-info;
+      background: #d3d4d6;
+      &:hover,
+      &:focus{
+        background: $--color-info;
+        border-color: $--color-info;
+        color: #fff;
+      }
+    }
+  }
+  &-success {
+    color:#fff;
+    background-color: $--color-success;
+    border-color: $--color-success;
+    &:hover,
+    &:focus{
+      background: #85ce61;
+      background-color: #85ce61;
+      color: #fff;
+    }
+    &.is-plain{
+      color: $--color-success;
+      background: #c2e7b0;
+      &:hover,
+      &:focus{
+        background: $--color-success;
+        border-color: $--color-success;
+        color: #fff;
+      }
+    }
+  }
+  &-warning{
+    color:#fff;
+    background-color: $--color-warning;
+    border-color: $--color-warning;
+    &:hover,
+    &:focus{
+      background: #ebb563;
+      background-color: #ebb563;
+      color: #fff;
+    }
+    &.is-plain{
+      color: $--color-warning;
+      background: #f5dab1;
+      &:hover,
+      &:focus{
+        background: $--color-warning;
+        border-color: $--color-warning;
+        color: #fff;
+      }
+    }
+  }
+  &-danger{
+    color:#fff;
+    background-color: $--color-danger;
+    border-color: $--color-danger;
+    &:hover,
+    &:focus{
+      background: #f78989;
+      background-color: #f78989;
+      color: #fff;
+    }
+    &.is-plain{
+      color: $--color-danger;
+      background: #fbc4c4;
+      &:hover,
+      &:focus{
+        background: $--color-danger;
+        border-color: $--color-danger;
+        color: #fff;
+      }
+    }
+  }
+}
+
+// 只要图标里包含icon 即给后面的span标签左边距5px
+.fe-button [class*=fe-icon-]+span {
+  margin-left: 5px;
+}

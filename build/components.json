@@ -1,0 +1,13 @@
+{
+  "button": "packages/button/index.js",
+  "checkbox": "packages/checkbox/index.js",
+  "checkbox-group": "packages/checkbox-group/index.js",
+  "radio": "packages/radio/index.js",
+  "radio-group": "packages/radio-group/index.js",
+  "dialog": "packages/dialog/index.js",
+  "switch": "packages/switch/index.js",
+  "form": "packages/form/index.js",
+  "form-item": "packages/form-item/index.js",
+  "input": "packages/input/index.js",
+  "notice": "packages/notice/notice.js"
+}

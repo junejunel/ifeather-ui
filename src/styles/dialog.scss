@@ -1,0 +1,80 @@
+@charset "UTF-8";
+@import "common/var";
+@import "mixins/mixins";
+
+@include b(dialog) {
+  position: relative;
+  margin: 15vh auto 50px;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  box-sizing: border-box;
+  width: 30%;
+  &__wrapper{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    margin: 0;
+    z-index: 2001;
+    background-color: rgba(0,0,0,0.5);
+  }
+  &__header{
+    padding: 20px 20px 10px;
+    
+  }
+  &__title{
+    line-height: 24px;
+    font-size: 18px;
+    color: #303133;
+  }
+  &__headerbtn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    .fe-icon-close{
+      color:909399
+    }
+  }
+  &__body{
+    padding: 30px 20px;
+    color: #606266;
+    font-size: 14px;
+    word-break: break-all;
+  }
+  &__footer{
+    padding: 10px 20px 20px;
+    text-align: right;
+    box-sizing: border-box;
+    ::v-deep .fe-button:first-child{
+      margin-right: 20px;
+    }
+  }
+}
+// 动画效果
+.fe-diolog-fade-enter-active {
+  animation: fade .3s;
+}
+
+.fe-diolog-fade-leave-active { // 离开时动画效果反转
+  animation: fade .3s reverse;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); // 开始时往下移一点
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
