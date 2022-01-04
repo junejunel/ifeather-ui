@@ -11,5 +11,5 @@ npm i ifeather-ui -g
 ```
 或
 ``` js
-yarn global add cifeather-ui
+yarn global add ifeather-ui
 ```

@@ -32,7 +32,7 @@ Vue.use(IFeatherUI)
 ### Example
 
 ```html
-<l-button>click</l-button>
+<fe-button>click</fe-button>
 ```
 
 ## On-demand Loading
