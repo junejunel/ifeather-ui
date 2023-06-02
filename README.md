@@ -9,7 +9,7 @@ IFeatherUI
     <h3>A lightweight Vue.js UI toolkit</h3>
 </h1>
 
-demo: [https://junejunel.github.io/ifeather-ui/](https://junejunel.github.io/ifeather-ui/)
+
 
 # Install
 
